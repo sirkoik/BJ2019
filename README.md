@@ -2,6 +2,10 @@
 
 Decided to use THREE.js
 
+v0.0.3pre
+* Added Links / credits
+* Fixed some errors
+
 v0.0.2pre
 * Added distance fog
 * Increased height of camera
