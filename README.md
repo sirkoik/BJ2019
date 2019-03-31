@@ -2,6 +2,10 @@
 
 Decided to use THREE.js
 
+v0.1.1 (temporary dev version)
+* Console popups for iOS
+* Update to r103 to fix "Cannot find variable: ImageBitmap" #15885 in mrdoob/three.js
+
 v0.1.0
 * Added candle
 * Added lens flare
