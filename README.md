@@ -1,7 +1,8 @@
 # BJ2019
 
-v0.1.3
+v1.0
 * Tweaked vertex shader of lens flare to look better
+* Added instructions
 
 v0.1.2
 * Upgrading to THREE.js r103 works!
@@ -38,8 +39,8 @@ v0.0.1pre
 * Object now present, and rotates.
 
 
-## Ideas
+## Ideas / goals
 
-Birthday cake.
-* Realistically shaded - implemented for the CISSP chip at least.
-* Realistic candles.
+Birthday cake. -done
+* Realistically shaded. -done
+* Realistic candles. -done
