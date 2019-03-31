@@ -3,7 +3,7 @@ var camera, renderer;
 window.onload = function() {
     // scene and camera.
     var scene = new THREE.Scene();
-    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(105, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 20;
     
     // orbit controls
