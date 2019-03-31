@@ -21,7 +21,7 @@ window.onload = function() {
     // renderer with better shadow map
     renderer = new THREE.WebGLRenderer({ antialias: true });
 
-    renderer.shadowMap.enabled = true;
+    //renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
     renderer.setSize(window.innerWidth, window.innerHeight);
