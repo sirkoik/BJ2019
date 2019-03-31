@@ -1,5 +1,8 @@
 # BJ2019
 
+v1.0.1
+* Added play / pause feature
+
 v1.0
 * Tweaked vertex shader of lens flare to look better
 * Added instructions
@@ -44,3 +47,9 @@ v0.0.1pre
 Birthday cake. -done
 * Realistically shaded. -done
 * Realistic candles. -done
+
+## Develop branch ideas
+
+* HDRi space background? Need to convert to cube map first.
+* https://svs.gsfc.nasa.gov/3895
+* Add glowmap to bottom of logo

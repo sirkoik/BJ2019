@@ -3,6 +3,8 @@ const GROUND = -15;
 var camera, renderer;
 var emitter;
 
+var animSpin = true;
+
 // scene and camera.
 var scene = new THREE.Scene();
 camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -155,29 +157,40 @@ loader2.load('models/candle2.glb', function(gltf) {
 }
 
 var ctr= 0;
+var flameCtr = 0;
 function animate() {
     requestAnimationFrame(animate);
 
-    //chip.rotation.x += 0.01;
-    chip.rotation.x = 1 * Math.sin(ctr * .2);
-    chip.rotation.y += 0.01;
-
     controls.update();
+    
+    // spin / rotate only if unpaused
+    if (animSpin) {
+        //chip.rotation.x += 0.01;
+        chip.rotation.x = 1 * Math.sin(ctr * .2);
+        chip.rotation.y += 0.01;
 
-    // vertical bobber function
-    ctr = ctr + 0.02;
-    chip.position.y = 4 * Math.sin(ctr);
-    //chip.position.z = 4 * Math.sin(ctr);
+        // vertical bobber function
+        chip.position.y = 4 * Math.sin(ctr);
+        //chip.position.z = 4 * Math.sin(ctr);
+        
+        ctr = ctr + 0.02;
+    }
 
     //flameOuter.material.opacity = 1.4 + Math.sin(ctr * 10);
     //flameOuter.material.opacity = 0.8;
-    flameOuter.rotation.x = 0.1 * Math.sin(ctr*5);
-    flameOuter.rotation.y = 0.1 * Math.sin(ctr*5);
+    flameOuter.rotation.x = 0.1 * Math.sin(flameCtr*5);
+    flameOuter.rotation.y = 0.1 * Math.sin(flameCtr*5);
+    
+    flameCtr = flameCtr + 0.02;
     
     renderer.render(scene, camera);
 }
 
 // Interactive
+document.querySelector('#pause').onclick = function(e) {
+    animSpin = !animSpin;
+}
+
 document.querySelector('#credits-link').onclick = function(e) {
     e.preventDefault();
     document.querySelector('.credits-container').style.display = 'flex';
