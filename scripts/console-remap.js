@@ -4,13 +4,20 @@
 // idea courtesy liviu blidar
 // https://stackoverflow.com/a/46529254
 
-var console = (function(c) {
-    return {
-        log: function(text) {alert('LOG: ' + text);},
-        info: function(text) {alert('INFO: ' + text);},
-        warn: function(text) {alert('WARN: ' + text);},
-        error: function(text) {alert('ERROR: ' + text);}
-    }
-})(window.console);
+// suppress popups (for production versions)
+const SUPPRESS_POPUPS = true;
 
-window.console = console;
+if (!SUPPRESS_POPUPS) {
+
+    var console = (function(c) {
+        return {
+            log: function(text)   { alert('LOG: ' + text);   c.log(text);  },
+            info: function(text)  { alert('INFO: ' + text);  c.info(text); },
+            warn: function(text)  { alert('WARN: ' + text);  c.warn(text); },
+            error: function(text) { alert('ERROR: ' + text); c.error(text);}
+        }
+    })(window.console);
+
+    window.console = console;
+    
+}

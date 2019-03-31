@@ -28,7 +28,7 @@ canvas:active {
 }
 
 .credits {
-    font-size: 2em;
+    font-size: 3vh;
     background: rgba(0, 0, 0, 0.5);
     color: lime;
     padding: 1em;
@@ -46,7 +46,7 @@ canvas:active {
 .footer {
     z-index: 2;
     
-    font-size: 2em;
+    font-size: 5vh;
     color: green;
     
     display: inline-block;
@@ -64,4 +64,8 @@ canvas:active {
     text-decoration-color: green;
     color: lime;
     text-shadow: 0px 0px 0.2em #000;
+}
+
+.footer a:hover {
+    color: #fff;
 }

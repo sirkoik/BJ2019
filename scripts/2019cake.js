@@ -16,7 +16,7 @@ controls.enableDamping = true;
 controls.dampingFactor = 1;
 controls.minDistance = 10;
 controls.maxDistance = 100;
-controls.maxPolarAngle = Math.PI / 2; // can't pivot below the floor plane.
+//controls.maxPolarAngle = Math.PI / 2; // can't pivot below the floor plane.
 
 //controls.autoRotate = true;
 
@@ -195,3 +195,8 @@ window.onresize = function() {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
+
+// disable iOS Safari scrolling / bouncing effects when trying to pan.
+// https://stackoverflow.com/questions/7768269/ipad-safari-disable-scrolling-and-bounce-effect
+function preventDefault(e) { e.preventDefault(); }
+document.body.addEventListener('touchmove', preventDefault, { passive: false });

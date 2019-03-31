@@ -1,6 +1,10 @@
 # BJ2019
 
-Decided to use THREE.js
+v0.1.2
+* Upgrading to THREE.js r103 works!
+* Prevent bouncing / moving of page when trying to pan in iOS Safari
+* Got rid of max polar angle restriction on controls
+* Text scales with viewer height
 
 v0.1.1 (temporary dev version)
 * Console popups for iOS
