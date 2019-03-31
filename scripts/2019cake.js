@@ -21,7 +21,7 @@ window.onload = function() {
     // renderer with better shadow map
     renderer = new THREE.WebGLRenderer({ antialias: true });
 
-    //renderer.shadowMap.enabled = true;
+    renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -30,7 +30,7 @@ window.onload = function() {
     
     
     // add distance fog
-    scene.fog = new THREE.Fog(0x000000, 10, 80);
+    //scene.fog = new THREE.Fog(0x000000, 10, 80);
 
     
     // add ambient light
