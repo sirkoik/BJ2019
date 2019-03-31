@@ -118,13 +118,16 @@ loader2.load('models/candle2.glb', function(gltf) {
     //flameOuter.material.color = new THREE.Color(0x00ff00);
     
     // candlelight source of light.
-    var candleLight = new THREE.PointLight(
-        0xE7E06D, 5, 20
-    );
+    var candleLight = new THREE.PointLight(0xE7E06D, 5, 20);
+    
     candleLight.castShadow = true;
     scene.add(candleLight);
     candleLight.parent = flameOuter;
     
+
+    
+    
+    // Candle lens flare
     //var light = new THREE.PointLight(0xE7E06D, 1.5, 2000);
     
     var textureLoader = new THREE.TextureLoader();
@@ -140,6 +143,7 @@ loader2.load('models/candle2.glb', function(gltf) {
     lensFlare.addElement( new THREE.LensflareElement( textureFlare2, 60, 0.6 ) );
     
     candleLight.add(lensFlare);
+    lensFlare.position.y += 1;
         
     
     

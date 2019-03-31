@@ -1,5 +1,8 @@
 # BJ2019
 
+v0.1.3
+* Tweaked vertex shader of lens flare to look better
+
 v0.1.2
 * Upgrading to THREE.js r103 works!
 * Prevent bouncing / moving of page when trying to pan in iOS Safari
