@@ -2,6 +2,13 @@
 
 Decided to use THREE.js
 
+v0.1.0
+* Added candle
+* Added lens flare
+* Changed rotational behavior
+* Removed spot light
+* Removed "floor" plane
+
 v0.0.3pre
 * Added Links / credits
 * Fixed some errors
