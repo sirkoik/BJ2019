@@ -89,7 +89,7 @@ window.onload = function() {
         chip.castShadow = true;
         chip.material.fog = false; // Makes it so the chip isn't affected by distance fog.
         
-        chip.material = new THREE.MeshBasicMaterial({color: 0x00ff00});
+        chip.material = new THREE.MeshStandardMaterial({color: 0x00ff00});
         
         // start the animation loop.
         animate();
